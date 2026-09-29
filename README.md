@@ -35,18 +35,18 @@ General Kali Linux security and pentesting tools for Ubuntu from Ubuntu's own re
 
 For Ubuntu, it is recommended to install Metasploit Framework using its own installation method and not add the Kali repository to Ubuntu.
 
-'''bash
+```bash
 curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb \
   > /tmp/msfinstall
 
 chmod +x /tmp/msfinstall
 sudo /tmp/msfinstall
-'''
+```
 
 Check:
-'''bash
+```bash
 msfconsole
-'''
+```
 
 ## Network traffic analysis
   wireshark \
@@ -56,6 +56,6 @@ msfconsole
   bettercap
 
 If you want to use Wireshark without sudo:
-'''bash
+```bash
 sudo usermod -aG wireshark "$USER"
-'''
+```
