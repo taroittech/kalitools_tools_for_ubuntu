@@ -1,9 +1,24 @@
 #!/usr/bin/env bash
 #
-# install-kali-tools.sh
-#
-# A Kali Linux-inspired pentest/security toolkit for Ubuntu.
-# Does not add the Kali Linux repository to Ubuntu.
+# ┌───────────────────────────────────────────────────────────────────────────┐
+# │ install-kali-tools.sh                                                     │
+# │                                                                           │
+# │ Kali Linux–Inspired Pentest & Security Toolkit for Ubuntu                 │
+# ├───────────────────────────────────────────────────────────────────────────┤
+# │ Author      : Taro Turtiainen                                             │
+# │ Created     : 2026-09-29                                                  │
+# │ Version     : 1.0                                                         │
+# │                                                                           │
+# │ Description :                                                             │
+# │   Installs a curated collection of security, penetration testing,         │
+# │   network analysis, reconnaissance and forensic tools on Ubuntu.          │
+# │                                                                           │
+# │ Notes       :                                                             │
+# │   • Does NOT add the Kali Linux repository to Ubuntu.                     │
+# │   • Uses Ubuntu-compatible packages and repositories only.                │
+# │                                                                           │
+# │ Usage       : sudo ./install-kali-tools.sh                                │
+# └───────────────────────────────────────────────────────────────────────────┘
 #
 
 set -u
