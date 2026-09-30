@@ -277,7 +277,7 @@ fi
 
 echo
 echo "=============================================="
-echo " Seuraavat työkalut voidaan tarkistaa:"
+echo " The following tools can be checked:"
 echo "=============================================="
 echo
 echo "Nmap:       nmap --version"
