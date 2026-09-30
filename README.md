@@ -59,3 +59,46 @@ If you want to use Wireshark without sudo:
 ```bash
 sudo usermod -aG wireshark "$USER"
 ```
+# Nmap, NSE Scripts & Vulners CVE Update Tool
+
+## Installation
+
+Make it executable:
+
+```bash
+chmod +x ~/nmap-update.sh
+```
+
+Run:
+
+```bash
+sudo ~/nmap-update.sh
+```
+
+After the update
+
+You can check for example:
+
+```bash
+nmap --script-help vulners
+```
+
+and run a version/CVE check on your own network:
+
+```bash
+sudo nmap -sV --script vulners 192.168.1.0/24
+```
+
+Or for a single server:
+
+```bash
+sudo nmap -sV --script vulners 192.168.1.10
+```
+
+mincvss=7 limits the results to at least CVSS 7.0 vulnerabilities:
+
+```bash
+sudo nmap -sV --script vulners --script-args mincvss=7 192.168.1.10
+```
+
+Note: vulners.nse retrieves vulnerability information Vulners service during the scan, so the actual CVE database is not the entire local Nmap database. The script updates the NSE script and Nmap itself, but the CVE information is retrieved from the service during the scan.
