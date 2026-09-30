@@ -1,23 +1,36 @@
 #!/usr/bin/env bash
 #
-# nmap-update.sh
+# ┌───────────────────────────────────────────────────────────────────────────┐
+# │ nmap-update.sh                                                            │
+# │                                                                           │
+# │ Nmap, NSE Scripts & Vulners CVE Update Tool                               │
+# ├───────────────────────────────────────────────────────────────────────────┤
+# │ Author      : Taro Turtiainen                                             │
+# │ Created     : 2026-09-30                                                  │
+# │ Version     : 1.0                                                         │
+# │                                                                           │
+# │ Description :                                                             │
+# │   Updates Nmap, NSE scripts, the NSE script database and the              │
+# │   vulners.nse vulnerability scanning script.                              │
+# │                                                                           │
+# │   The script also performs a CVE vulnerability lookup test after          │
+# │   the update to verify that the Vulners NSE integration is working.       │
+# │                                                                           │
+# │ Supported   :                                                             │
+# │   • Ubuntu                                                                │
+# │   • Debian                                                                │
+# │   • Kali Linux                                                            │
+# │                                                                           │
+# │ Notes       :                                                             │
+# │   • Does NOT add the Kali Linux repository to Ubuntu.                     │
+# │   • Uses the distribution's native package repositories for Nmap.         │
+# │   • vulners.nse retrieves vulnerability information from Vulners.         │
+# │   • Run only against systems you are authorized to scan.                  │
+# │                                                                           │
+# │ Usage       : sudo ./nmap-update.sh                                       │
+# └───────────────────────────────────────────────────────────────────────────┘
 #
-# Päivittää:
-#   - Nmap
-#   - NSE-scripts
-#   - NSE script database
-#   - vulners.nse
-#
-# Finally, test the CVE search.
-#
-# Supported:
-#   - Ubuntu
-#   - Debian
-#   - Kali Linux
-#
-# Use:
-#   sudo ./nmap-update.sh
-#
+
 
 set -euo pipefail
 
